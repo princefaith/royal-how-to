@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Royal How To</title>
+    <style>
+        /* Reusing the same styling from homepage for consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Page header */
+        .page-header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #ecf0f1;
+        }
+        
+        .page-header h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        /* Main categories section */
+        .main-categories {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-img {
+            height: 180px;
+            background-color: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .category-content {
+            padding: 25px;
+        }
+        
+        .category-content h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .category-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .guide-count {
+            display: block;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .category-link {
+            display: inline-block;
+            color: #3498db;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        .category-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Popular categories section */
+        .popular-categories {
+            background-color: #ecf0f1;
+            padding: 50px 0;
+        }
+        
+        .popular-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .popular-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .popular-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .popular-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Royal How To</div>
+            <p class="tagline">Simple guides for everyday tasks</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rht categories.html" style="text-decoration: underline;">Categories</a></li>
+                <li><a href="rht about us.html">About Us</a></li>            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <div class="container">
+            <h1>Browse All Categories</h1>
+            <p>Find step-by-step guides organized by category. Everything is simple and easy to follow.</p>
+        </div>
+    </section>
+    
+    <section class="main-categories">
+        <div class="container">
+            <h2 class="section-title">Main Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-img"></div>
+                    <div class="category-content">
+                        <h2>Home improvement</h2>
+                        <span class="guide-count">5 guides</span>
+                        <p>Simple fixes and DIY projects for your home improvement. Learn to maintain and improve your living space.</p>
+                        <a href="categories/home improvement.html" class="category-link">View Home improvement Guides →</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-img"></div>
+                    <div class="category-content">
+                        <h2>Technology</h2>
+                        <span class="guide-count">5 guides</span>
+                        <p>Learn to use devices, apps, and software with ease. From basic phone tips to advanced computer skills.</p>
+                        <a href="categories/technology.html" class="category-link">View Technology Guides →</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-img"></div>
+                    <div class="category-content">
+                        <h2>Cooking & Kitchen</h2>
+                        <span class="guide-count">5 guides</span>
+                        <p>Easy recipes and cooking techniques for everyone. From basic meals to advanced kitchen skills.</p>
+                        <a href="categories/cooking & kitchen.html" class="category-link">View Cooking Guides →</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-img">🧴</div>
+                    <div class="category-content">
+                        <h2>Personal finance</h2>
+                        <span class="guide-count">4 guides</span>
+                        <p>make money with Royal how to personal finances.</p>
+                        <a href="categories/personal finance.html" class="category-link">View Personal finance Guides →</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-img"></div>
+                    <div class="category-content">
+                        <h2>education</h2>
+                        <span class="guide-count">0 guides</span>
+                        <p>educate yourself with this guides.</p>
+                        <a href="categories/education.html" class="category-link">View education guides</option>
+                          opt+
+                        </optgroup></figure>> →</a>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category -img"></div>
+                    <div class="category-content">
+                        <h2>health& fitness</h2>
+                        <span class="guide-count">0 guides</span>
+                        <p>look healthy and strong with our guides</p>
+                        <a href="categories/health&fitness.html" class="category-link">View heath& fitness Guides →</a>
+                    </div>
+                </div>
+                                <div class="category-card">
+                  <div class="category-img"></div>
+                  <div class="category-content">
+                    <h2>lifestyle</h2>
+                    <span class="guide-count">1 guides</span>
+                    <p>look elegant with, our tips.</p>
+                    <a href="categories/lifestyle.html" class="category-link">View our Guides →</a>
+                  </div>
+                </div>
+                          
+        </div>
+    </section>
+    
+    <section class="popular-categories">
+        <div class="container">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="popular-list">
+                <div class="popular-item">
+                    <h3>Home improvement</h3>
+                    <p><a href="home improvement/how to unclcg a drain.html">How to Unclog a Drain</a></p>
+                    <p><a href="home improvement/how to fix a faucet.html">How to Fix a Leaky Faucet</a></p>
+                    <p><a href="home improvement/how to fix a toilet.html">How to fix a toilet</a></p>
+                </div>
+                
+                <div class="popular-item">
+                    <h3>Technology</h3>
+                    <p><a href="technology/how to fix a fridge or refrigerator.html">How to fix a fridge</a></p>
+                    <p><a href="technology/how to fix a slow wifi or internet connection.html">How to fix slow internet</a></p>
+                    <p><a href="technology/how to fix a light bulb.html">How to fix a light bulb</a></p>
+                </div>
+                
+                <div class="popular-item">
+                    <h3>Cooking & Kitchen</h3>
+                    <p><a href="cooking&kitchen/how to make pancakes.html">How to Make Pancakes</a></p>
+                    <p><a href="cooking&kitchen/how to cook rice.html">How to Cook Rice Perfectly</a></p>
+                    <p><a href="cooking&kitchen/how to boil egg.html">How to boil egg</a></p>
+                </div>
+                
+                <div class="popular-item">
+                    <h3>Personal finance</h3>
+                    <p><a href="personal finance/how to make money writing online.html">How to make money by writing online</a></p>
+                    <p><a href="personal finance/how to buy a house.html">How to buy a house</a></p>
+                    <p><a href="personal finance/how to make money writing online.html">How to make money writing online</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Royal How To</div>
+                <p>Making everyday tasks simpler</p>
+                
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="rht about us.html">About</a>
+
+                </div>
+                
+                <p>&copy; 2025 Royal How To. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
