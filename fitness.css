@@ -1,0 +1,288 @@
+style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 15px 0;
+    background-color: #ecf0f1;
+}
+
+.breadcrumb-links {
+    display: flex;
+    list-style: none;
+}
+
+.breadcrumb-links li {
+    margin-right: 10px;
+}
+
+.breadcrumb-links a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.breadcrumb-links a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-links li:not(:last-child)::after {
+    content: ">";
+    margin-left: 10px;
+    color: #7f8c8d;
+}
+
+/* Page header */
+.page-header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #ecf0f1;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.page-description {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Category content */
+.category-content {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.guide-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-image {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fitness-bg {
+    background-color: #3498db;
+}
+
+.nutrition-bg {
+    background-color: #3498db;
+}
+
+.wellness-bg {
+    background-color: #3498db;
+}
+
+.guide-content {
+    padding: 20px;
+}
+
+.guide-title {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.guide-excerpt {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    color: #e74c3c;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.difficulty-beginner {
+    background-color: #e8f6ef;
+    color: #27ae60;
+}
+
+.difficulty-intermediate {
+    background-color: #eaf2f8;
+    color: #2980b9;
+}
+
+.difficulty-advanced {
+    background-color: #f9ebea;
+    color: #c0392b;
+}
+
+/* Popular topics */
+.topics-section {
+    background-color: #ecf0f1;
+    padding: 40px 0;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.topic-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topic-item a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.topic-item a:hover {
+    color: #e74c3c;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+}
